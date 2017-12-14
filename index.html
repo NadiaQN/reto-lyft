@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Lyft</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/js/intl-tel-input-master/build/css/intlTelInput.css">
+	<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<!-- pantalla splash -->
+  <section id="splash">
+    <div class="row">
+      <div class="col-xs-12">
+        <div>
+          <img class="logo" src="assets/img/logo-blanco.png" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- Pantalla principal con botones register o login -->
+  <section class="login-register" id="principal">
+    <div class="row">
+      <div class="col-xs-12">
+        <img class="logo2" src="assets/img/logo-blanco.png" alt="">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <img class="logo3" src="assets/img/logo.png" alt="">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <a href="#sign-up" class="btn btn-primary myColor">Login In</a>
+        <a href="#register" class="btn btn-primary myColor" data-toggle="modal">Sign Up</a>
+      </div>
+    </div>
+  </section>
+<!-- modal register -->
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="modal fade" id="register">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <a href="index.html"><span class="glyphicon glyphicon-menu-left"></span></a>
+                <h3>Sign Up</h3>
+                <p>Join now for free ride credit</p>
+              </div>
+              <div class="modal-body">
+                <input type="tel" id="demo" placeholder="Number">
+                <p>We'll send a text to verify your phone</p>
+              </div>
+              <div class="modal-footer">
+                <a href="#number-random" class="btn" id="next1" data-toggle="modal">Next</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- modal codigo aleatorio-->
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="modal fade" id="number-random">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-body code">
+                <a href="#verify-code" class="btn btn-primary" data-toggle="modal">Ok</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- modal verify number -->
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="modal fade" id="verify-code">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <a href="#register"><span class="glyphicon glyphicon-menu-left"></span></a>
+                <h2>Verify phone number</h2>
+                <h3>Join now for free ride credit</h3>
+              </div>
+              <div class="modal-body inline">
+                <p>LAB-</p><input class="number" type="text"><input class="number" type="text"><input class="number" type="text">
+                <a href="#number-random" class="btn btn-default" id="resend" data-toggle="modal">Resend Code</a>
+              </div>
+              <div class="modal-footer">
+                <a href="#sign-up" class="btn btn-default" id="next2" data-toggle="modal">Next</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- modal sign up -->
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="modal fade" id="sign-up">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <a href="#verify-code"><span class="glyphicon glyphicon-menu-left"></span></a>
+                <h2>Sign up</h2>
+                <h3>Join now for free ride credit</h3>
+              </div>
+              <div class="modal-body">
+                <div class="input-group">
+                  <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-user"></span></span>
+                  <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+                </div>
+                <div class="input-group">
+                  <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-envelope"></span></span>
+                  <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+                </div>
+                <p><input type="checkbox">I agree to Lyft'ss <a href="#">Terms of Service</a></p>
+              </div>
+              <div class="modal-footer">
+                <a href="#splash-final" class="btn btn-default" id="next3" data-toggle="modal">Next</a>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- vista splash final -->
+  <section id="splash-final">
+    <div class="row">
+      <div class="col-xs-12">
+        <div>
+          <img class="logo" src="assets/img/logo-blanco.png" alt="">
+          <img src="assets/img/check.png" alt="">
+          <h3>Tu registro se ha realizado con exito.</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- scripts -->
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script src="assets/js/intl-tel-input-master/build/js/intlTelInput.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="assets/js/app.js"></script>
+</body>
+</html>
